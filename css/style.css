@@ -1,0 +1,140 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Crypto Theme Colors */
+:root {
+  --cope-purple: #8a2be2;
+  --cope-blue: #00bfff;
+  --cope-pink: #ff1493;
+  --cope-bg: #0f0c29;
+}
+
+body {
+  font-family: 'Comic Neue', cursive;
+  background: var(--cope-bg);
+  color: white;
+  line-height: 1.6;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(138, 43, 226, 0.1) 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, rgba(0, 191, 255, 0.1) 0%, transparent 20%);
+}
+
+/* Header Styles */
+header {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--cope-purple), var(--cope-blue));
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-title {
+  font-family: 'Bangers', cursive;
+  font-size: 4rem;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+  margin-bottom: 1rem;
+  animation: glow 2s infinite alternate;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Meme Generator Section */
+#meme-generator {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+#memeCanvas {
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  background: black;
+  display: block;
+  margin: 0 auto 1rem;
+  border: 3px solid var(--cope-pink);
+  border-radius: 10px;
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.controls input[type="number"] {
+  width: 80px;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid var(--cope-purple);
+}
+
+.controls input[type="color"] {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.controls label {
+  color: white;
+  font-size: 0.9rem;
+}
+
+.export-btn {
+  background: linear-gradient(135deg, var(--cope-pink), var(--cope-purple));
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.export-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px var(--cope-blue);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  margin-top: 2rem;
+  background: rgba(0,0,0,0.3);
+}
+
+/* Animations */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px var(--cope-blue), 0 0 20px var(--cope-blue);
+  }
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px var(--cope-pink), 0 0 40px var(--cope-pink);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .controls {
+    flex-direction: column;
+    align-items: center;
+  }
+}
