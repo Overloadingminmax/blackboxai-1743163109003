@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Dashboard with Memes</title>
+    <!-- Using simpler CSS instead of Tailwind -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .dashboard {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .panel {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            flex: 1;
+            min-width: 300px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        h2 {
+            margin-top: 0;
+            color: #444;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .meme-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        .meme-item img {
+            width: 100%;
+            border-radius: 4px;
+        }
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+        .error {
+            color: #d32f2f;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Top 10 Cryptocurrencies</h1>
+        
+        <div class="dashboard">
+            <div class="panel">
+                <h2>Market Cap Rankings</h2>
+                <div id="crypto-table" class="loading">
+                    Loading crypto data...
+                </div>
+                <div id="crypto-error" class="error" style="display:none;"></div>
+            </div>
+            
+            <div class="panel">
+                <h2>Crypto Memes</h2>
+                <div id="meme-display" class="meme-grid loading">
+                    Loading memes...
+                </div>
+                <div id="meme-error" class="error" style="display:none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/crypto-dashboard.js"></script>
+</body>
+</html>
