@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COPE (Copy Empire)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1 class="hero-title">COPE (Copy Empire)</h1>
+        <p class="hero-subtitle">The Empire of Crypto Memes</p>
+        <button class="generate-button">Generate Your Meme →</button>
+    </header>
+    <main>
+        <section id="meme-generator">
+            <h2>Meme Generator Tool</h2>
+            <canvas id="memeCanvas"></canvas>
+            <div class="controls">
+                <input type="text" id="memeText" placeholder="Enter your meme text here">
+                <button id="addTextButton">Add Text</button>
+                <input type="number" id="fontSize" placeholder="Font Size" min="10" max="100" value="40">
+                <input type="color" id="fontColor" value="#ffffff">
+                <label for="fontColor">Font Color</label>
+                <button id="exportButton" class="export-btn">Export Meme</button>
+            </div>
+        </section>
+        <section id="sticker-panel">
+            <h2>Crypto Stickers</h2>
+            <div class="stickers">
+                <div class="sticker" data-emoji="💰">💰</div>
+                <div class="sticker" data-emoji="Ξ">Ξ</div>
+                <div class="sticker" data-emoji="🐶">🐶</div>
+                <div class="sticker" data-emoji="©">©</div>
+            </div>
+        </section>
+        <section id="trending-memes">
+            <h2>Trending Memes</h2>
+            <div class="meme-gallery">
+                <!-- Meme thumbnails will be populated here -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Follow us on <a href="#">Twitter</a> | <a href="#">Telegram</a></p>
+        <p>Disclaimer: Not financial advice. Just memes.</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
